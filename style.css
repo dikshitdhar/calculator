@@ -13,11 +13,13 @@ body{
 
 .container{
     border: 3px solid black;
-    margin-top: 20%;
+    margin-top: 7%;
     border-radius: 10px;
-    width: 340px;
-    height: 450px;
+    width: 350px;
+    min-width:300px;
+    height: 470px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
 
    
@@ -58,4 +60,14 @@ button:hover{
 .eql{
     background-color: rgb(226, 89, 43);
     color: rgb(0, 225, 255);
+}
+.name{
+    padding: 5px 0px;
+    font-size: 15px;
+    color: rgba(132, 131, 129, 0.645);
+}
+.name a{
+    text-decoration: none;
+    color: rgba(132, 131, 129, 0.645);
+
 }
