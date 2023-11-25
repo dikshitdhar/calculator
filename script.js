@@ -1,4 +1,3 @@
-
 let buttons = document.querySelectorAll('button');
 let input = document.getElementById('inputBox');
 let string = "";
@@ -10,9 +9,12 @@ buttons.forEach(button => {
     });
 });
 
-input.addEventListener('keyup', (e) => {
-    if (e.key === 'Enter') {
-        performCalculation(input.value);
+input.addEventListener('input', (e) => {
+    let currentValue = e.target.value;
+    let lastChar = currentValue[currentValue.length - 1];
+
+    if (!(/[0-9]/).test(lastChar)) {
+        e.target.value = currentValue.slice(0, -1);
     }
 });
 
@@ -35,3 +37,4 @@ function performCalculation(value) {
         string += value;
         input.value = string;
     }
+}
